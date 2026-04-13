@@ -58,6 +58,7 @@ class MyApp extends StatelessWidget {
       );
     }
 
+    // Menentukan warna utama
     Color color = Theme.of(context).primaryColor;
 
     // Membuat buttonSection
@@ -69,6 +70,8 @@ class MyApp extends StatelessWidget {
         _buildButtonColumn(color, Icons.share, 'SHARE'),
       ],
     );
+
+    // Membuat widget textSection
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: const Text(
@@ -78,7 +81,7 @@ class MyApp extends StatelessWidget {
         'Tambahkan nama dan NIM Anda sebagai '
         'identitas hasil pekerjaan Anda. '
         'Selamat mengerjakan 🙂.',
-        softWrap: true,
+        softWrap: true, // Teks akan membungkus jika mencapai batas
       ),
     );
 
@@ -86,7 +89,20 @@ class MyApp extends StatelessWidget {
       title: 'Flutter layout: Ganang Andika Kurnia Putra',
       home: Scaffold(
         appBar: AppBar(title: const Text('Flutter layout demo')),
-        body: Column(children: [titleSection, buttonSection, textSection]),
+        body: ListView(
+          // Menggunakan ListView untuk mendukung scrolling
+          children: [
+            Image.asset(
+              'images/lake.jpg', // Path gambar sesuai dengan yang ditulis di pubspec.yaml
+              width: 600,
+              height: 240,
+              fit: BoxFit.cover, // Gambar menutupi area
+            ),
+            titleSection, // Menambahkan titleSection
+            buttonSection, // Menambahkan buttonSection
+            textSection, // Menambahkan textSection
+          ],
+        ),
       ),
     );
   }
