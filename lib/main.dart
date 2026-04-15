@@ -75,12 +75,10 @@ class MyApp extends StatelessWidget {
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: const Text(
-        'Carilah teks di internet yang sesuai '
-        'dengan foto atau tempat wisata yang ingin '
-        'Anda tampilkan. '
-        'Tambahkan nama dan NIM Anda sebagai '
-        'identitas hasil pekerjaan Anda. '
-        'Selamat mengerjakan 🙂.',
+        'Gunung Butak memiliki ketinggian sekitar 2.868 mdpl dengan jalur pendakian yang cukup panjang. '
+        'Namun, keindahan savana yang luas dan pemandangan alamnya sangat memukau, '
+        'sehingga cocok bagi pecinta camping dan petualangan'
+        '\n\nNama: Ganang Andika Kurnia Putra \nNIM: 244107060008',
         softWrap: true, // Teks akan membungkus jika mencapai batas
       ),
     );
@@ -93,7 +91,7 @@ class MyApp extends StatelessWidget {
           // Menggunakan ListView untuk mendukung scrolling
           children: [
             Image.asset(
-              'images/lake.jpg', // Path gambar sesuai dengan yang ditulis di pubspec.yaml
+              'images/buthak.jpg', // Path gambar sesuai dengan yang ditulis di pubspec.yaml
               width: 600,
               height: 240,
               fit: BoxFit.cover, // Gambar menutupi area
